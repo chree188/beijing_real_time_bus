@@ -1,0 +1,10 @@
+/back*
+/*/back*
+/github
+/apk
+*.bak
+*.pyc
+*.json
+*.txt
+*.cookies
+
