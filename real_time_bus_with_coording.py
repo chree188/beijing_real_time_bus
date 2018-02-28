@@ -161,7 +161,7 @@ def getLineState(lineId):
         return None
     retJson = result.json()["root"]
     if retJson["status"] != "200":
-        print "%s return errcode = %s, errmsg = %s" % (url, retJson["errcode"], retJson["errmsg"])
+        print "%s return status = %s, message = %s" % (url, retJson["status"], retJson["message"])
         return None
     busNum = retJson['num']
     busData = retJson['data']['bus']
@@ -240,18 +240,17 @@ def run(name, reverse):
         sys.exit(2)
     
     stations = getLineStations(lineId)
-    if len(stations) == 0:
+    if stations == None or len(stations) == 0:
         print "get stations have errors, line name = %s, id = %s" % (name, lineId)
         sys.exit(3)
 
     buses = getLineState(lineId)
-    if len(buses) == 0:
+    if buses == None or len(buses) == 0:
         print "get stations have errors, line name = %s, id = %s" % (name, lineId)
         sys.exit(4)
     
     init(autoreset=True)
     showBusInfo(stations, buses)
-
 
 
 if __name__ == "__main__":
