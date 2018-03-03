@@ -51,7 +51,7 @@ headers = {
 # "TIME" : "1518615547",
 # "ABTOKEN" : "d6b53963ec654f913fa30280a4ef6d65",
 session = requests.Session()
-stdOutEncoding = sys.stdout.encoding
+stdOutEncoding = sys.stdout.encoding.lower()
 
 
 def getToken(strInput):
