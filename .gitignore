@@ -2,6 +2,7 @@
 /*/back*
 /github
 /apk
+/web
 *.bak
 *.pyc
 *.json
