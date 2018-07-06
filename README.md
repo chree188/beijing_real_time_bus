@@ -5,7 +5,7 @@ Usage
 --------
 web_bus.py 和 mobile_bus.py 使用方法一样
 
-默认 300内:
+默认 1路:
 python web_bus.py
 
 6 路:
